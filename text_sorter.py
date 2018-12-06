@@ -41,6 +41,7 @@ def sort_text(text):
 
 
 def sort_ascending(text):
+    # isalpha()는 한글도 True를 반환하므로 정규표현식을 사용한다.
     alphas = ''.join(r_alpha.findall(text))
     alphas = sort_text(alphas)
 
