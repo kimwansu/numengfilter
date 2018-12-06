@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form method="POST" action="/">
+            <ul style="list-style-type: none">
+                <li>URL: <input type="url" name="url" /></li>
+                <li>Type:
+                    <select name="type">
+                        <option value="txt">TXT</option>
+                        <option value="html">HTML</option>
+                    </select>
+                </li>
+                <li>출력 묶음 단위(자연수):
+                    <input type="number" name="unit" /></li>
+                </li>
+                <li>
+                    <button type="submit">출력</button>
+                </li>
+            </ul>
+        </form>
+
+        <ul>
+            <li>몫:
+                {% if shares %}
+                <span>{{', '.join(shares)}}</span>
+                {% endif %}
+            </li>
+            <li>나머지:
+                {% if remain %}
+                <span>{{rest}}</span>
+                {% endif %}
+            </li>
+        </ul>
+    </body>
+</html>
